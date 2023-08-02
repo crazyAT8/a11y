@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just use button</title>
+    <style>
+        .fancy {
+            display: inline-block;
+            background: tomato;
+            color: white;
+            padding: 18px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+        }
+        .fancy[disabled] {
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="fancy" tabindex="0">Sign Up!</div>
+        <!--
+            This will gain focus when tabbing through
+            but the screen reader will just read
+            "Sign Up"       
+        -->
+    <button class="fancy">Sign Up</button>
+        <!--
+            This have focus by itself
+            and the screen reader will read
+            "Sign Up button"
+        -->
+        <!--
+            Synthetic Click Activation
+            - the div when focused can't be 
+                activated with the keyboard
+                    you'd have to add key down handlers
+                    look at key codes and 
+                    differentiate btw space-bar and enter keys
+            - the button can
+                the brower automatically assumes this
+                    given that we used the button tag
+        -->
+
+        <div class="fancy" tabindex="0" disabled>Sign Up!</div>
+            <!--
+                both buttons are disabled and grayed out
+                but you can still click on the div
+                and activate the alert window
+            -->
+        <button class="fancy" disabled>Sign Up</button>
+
+    <script>
+        var btns = Array.from(document.querySelectorAll('.fancy'));
+        btns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                alert('I was clicked!')
+            })
+        })
+
+
+    </script>
+</body>
+</html>

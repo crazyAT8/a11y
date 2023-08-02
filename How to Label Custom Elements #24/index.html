@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Label Custom Elements</title>
+</head>
+<body>
+    <div>
+        <label>
+            Username
+            <input type="text">                                 <!-- Screen Read with say "username input text" -->
+        </label>
+    </div>
+
+    <div>
+        <label for="newsletter">Join newletter?</label>
+        <input type="checkbox" id="newsletter">
+    </div>
+
+    <!-- Custom Label-->
+    <div>
+        <label>
+            Click me 
+            <howto-checkbox></howto-checkbox>
+        </label>
+    </div>
+
+    <div>
+        <howto-label>
+            Sign up?
+            <howto-checkbox></howto-checkbox>
+        </howto-label>
+    </div>
+
+    <div>
+        <howto-label for="foo">
+            Give us money!
+        </howto-label>
+        <howto-checkbox id="foo"></howto-checkbox>
+    </div>
+
+    <div>
+        <howto-label>
+            <strong>Sign up <em>for real!</em></strong>
+            <howto-label howto-label-target></howto-label>
+        </howto-label>
+    </div>
+</body>
+</html>

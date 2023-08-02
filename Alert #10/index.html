@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, 'sans-serif';
+        }
+        #alert {
+            margin-bottom: 20px;
+        }
+        .notification {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #43A047;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <section id="alert" role="alert"></section>
+    <button id="btn">show alert</button>
+
+    <template id="notification-tmpl">                        <!--contents will be grabbed by JS later and inserted-->
+        <div class="notification"></div>
+    </template>
+
+    <script>
+        //we are going to tell it, when the user clicks the button to drop the content of the template into the alert
+        const btn = document.querySelector('#btn');
+        const alert = document.querySelector('#alert');
+        const tmpl = document.querySelector('#notification-tmpl');
+
+        btn.onclick = function() {
+            const clone = tmpl.content.cloneNode(true);
+            clone.querySelector('.notification').textContent = 'You win!';             
+            alert.appendChild(clone);
+        };
+    </script>
+</body>
+</html>

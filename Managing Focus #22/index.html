@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Focus</title>
+</head>
+<body>
+    
+    <!-- Our super simple single-page web app (SPA) -->
+    <div class="wrapper">
+        <nav id="side-nav" aria-labelledby="menu-label">
+            <span id="side-nav-label">Menu</span>
+            <a href="/zombies">Zombies</a>
+            <a href="/hipsters">Hipsters</a>
+            <a href="/bacon">Bacon</a>
+        </nav>
+        <main></main>
+    </div>
+
+    <!-- Page templates -->
+    <template id="zombies-template">
+        <article class="zombies">
+            <header>
+                <h1 tabindex="-1" class="contain">Zombie Ipsum</h1>
+            </header>
+            <section>
+                <div class="contain">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores deserunt, rem itaque eligendi libero voluptas dignissimos necessitatibus, explicabo consectetur ducimus, culpa magni beatae voluptatibus optio natus quae amet laborum nulla.</p>
+                    <p>sldjnblsd <a href="#">horribilem</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quidem nobis ad quos eum itaque, reiciendis sequi inventore minus corrupti fugiat eius alias minima quo aperiam voluptate id iure corporis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti incidunt laborum quis eaque, omnis rem expedita ut id ex animi! Vel inventore molestiae fugiat iusto aspernatur itaque perferendis soluta modi?</p>
+                </div>
+            </section>
+        </article>
+    </template>
+    <template id="hipsters-template">
+        <article class="hipsters">
+            <header>
+                <h1 tabindex="-1" class="contain">Hipster Ipsum</h1>
+            </header>
+            <section>
+                <div class="contain">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores deserunt, rem itaque eligendi libero voluptas dignissimos necessitatibus, explicabo consectetur ducimus, culpa magni beatae voluptatibus optio natus quae amet laborum nulla.</p>
+                    <p>sldjnblsd <a href="#">wolf moon</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quidem nobis ad quos eum itaque, reiciendis sequi inventore minus corrupti fugiat eius alias minima quo aperiam voluptate id iure corporis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti incidunt laborum quis eaque, omnis rem expedita ut id ex animi! Vel inventore molestiae fugiat iusto aspernatur itaque perferendis soluta modi?</p>
+                </div>
+            </section>
+        </article>
+    </template>
+    <template id="bacon-template">
+        <article class="bacon">
+            <header>
+                <h1 tabindex="-1" class="contain">Bacon Ipsum</h1>
+            </header>
+            <section>
+                <div class="contain">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores deserunt, rem itaque eligendi libero voluptas dignissimos necessitatibus, explicabo consectetur ducimus, culpa magni beatae voluptatibus optio natus quae amet laborum nulla.</p>
+                    <p>sldjnblsd <a href="#">hamburger meatball</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quidem nobis ad quos eum itaque, reiciendis sequi inventore minus corrupti fugiat eius alias minima quo aperiam voluptate id iure corporis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti incidunt laborum quis eaque, omnis rem expedita ut id ex animi! Vel inventore molestiae fugiat iusto aspernatur itaque perferendis soluta modi?</p>
+                </div>
+            </section>
+        </article>
+    </template>
+
+    <script src=""></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>

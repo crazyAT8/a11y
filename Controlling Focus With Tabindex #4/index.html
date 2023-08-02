@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlling Focus with TabIndex</title>
+</head>
+<body>
+    <div>Not in the tab order</div>
+    <div tabindex="0">In the tab order</div>
+    <div tabindex="-1">Not in the tab order (but is focusable)</div>
+    <div tabindex="5">Shead of everything in the tab order</div>
+        <!--a tabindex greater then zero will get jumped to 
+            first depending on the how high the number is
+            you probably shouldn't use                       -->
+    <button>Totes focusable</button>
+
+    <script>
+        document.querySelector('[tabindex="-1"').focus()
+    </script>
+</body>
+</html>

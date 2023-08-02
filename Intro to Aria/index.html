@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>
+        <input type="radio" checked name="tType" value="0">       <!--screen reader will read "round trip, selected, radio button"-->
+        Round Trip
+    </label>
+
+    <label>
+        <input type="checkbow">
+        Receive promotional offers              <!--will read " checkbox, receive promotional offers, selected"-->
+    </label>
+
+    <!--custom checkbox-->
+    <div class="checkbox checked">
+        Receive promotional offers               <!--will read "receive promotional offers"-->
+    </div>
+
+        <!--this is how you would add SR specifics-->
+    <div tabindex="0" class="checkbox checked" checked role="checkbox" aria-checked="true">
+        Receive promotional offers 
+    </div>
+
+    <!--Lets say you want to modify a button
+        to look like a toggle swith 
+        with two states on and off-->
+
+    <!--Normal way-->
+    <button class="toggle" checked>                                     <!--reads "button enable"-->
+        Enable
+    </button>
+
+    <!--Modified way-->
+    <button role="switch" aria-checked="true" class="toggle">           <!--read "switch enable checked"-->
+        Enable 
+    </button>
+</body>
+</html>
